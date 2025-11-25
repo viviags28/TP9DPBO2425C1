@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Balapan</title>
+
+  <style>
+    :root{
+      --bg:#f7f8fb;--card:#fff;--muted:#6b7280;--accent:#2563eb;
+      --border:#e6e9ef;--radius:8px;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto;
+    }
+    body{margin:0;background:var(--bg)}
+    .container{max-width:700px;margin:36px auto;padding:18px}
+    .card{background:var(--card);padding:18px;border:1px solid var(--border);border-radius:var(--radius)}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{font-size:13px;color:var(--muted);margin-bottom:6px;display:block}
+    input{padding:10px;border:1px solid var(--border);border-radius:6px;width:100%}
+    .full{grid-column:1/-1}
+    .actions{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}
+    .btn{padding:10px 14px;border-radius:8px;cursor:pointer;border:1px solid transparent;text-decoration:none;display:inline-block;text-align:center}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-muted{border:1px solid var(--border);color:var(--muted)}
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h1>Form Balapan</h1>
+
+    <!-- FIX PALING PENTING DI BAWAH INI -->
+    <form method="post" action="index.php?menu=balapan">
+
+      <input type="hidden" name="action" value="{{action}}">
+      <input type="hidden" name="id" value="{{id}}">
+
+      <div>
+        <label for="namaBalapan">Nama Balapan</label>
+        <input id="namaBalapan" name="namaBalapan" type="text"
+               value="{{namaBalapan}}" placeholder="Mis. GP Indonesia" required>
+      </div>
+
+      <div>
+        <label for="lokasi">Lokasi</label>
+        <input id="lokasi" name="lokasi" type="text"
+               value="{{lokasi}}" placeholder="Mis. Mandalika">
+      </div>
+
+      <div>
+        <label for="tanggal">Tanggal</label>
+        <input id="tanggal" name="tanggal" type="date"
+               value="{{tanggal}}">
+      </div>
+
+      <div class="full actions">
+        <a href="index.php?menu=balapan" class="btn btn-muted">Batal</a>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

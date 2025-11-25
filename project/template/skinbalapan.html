@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Balapan — Daftar</title>
+  <style>
+    :root{
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --danger: #ef4444;
+      --border: #e6e9ef;
+      --radius: 8px;
+      --pad: 14px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+
+    html,body{height:100%;margin:0;background:var(--bg);}
+    .container{max-width:980px;margin:36px auto;padding:18px;}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:12px;
+      box-shadow: 0 1px 2px rgba(16,24,40,0.03);
+    }
+
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    thead th{padding:12px 10px;color:var(--muted);border-bottom:1px solid var(--border)}
+    tbody td{padding:12px 10px;border-bottom:1px solid var(--bg)}
+
+    .col-id{width:48px;color:var(--muted);}
+    .col-actions{width:170px;text-align:right}
+
+    .btn{
+      display:inline-block;padding:8px 10px;border-radius:6px;font-size:13px;text-decoration:none;
+    }
+    .btn-edit{color:var(--accent);}
+    .btn-delete{color:var(--danger);margin-left:8px}
+    .btn-add{background:var(--accent);color:#fff;border-radius:8px;padding:10px 14px}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div style="width:100%;background:#fff;border-bottom:1px solid(var(--border));padding:14px 0;margin-bottom:20px;">
+    <div style="max-width:980px;margin:auto;display:flex;gap:10px;">
+      <a href="index.php?menu=pembalap" class="btn" style="background:#10b981;color:#fff;">Pembalap</a>
+      <a href="index.php?menu=balapan" class="btn" style="background:var(--accent);color:#fff;">Balapan</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>Daftar Balapan</h1>
+
+      <div style="overflow:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-id">No</th>
+              <th>Nama Balapan</th>
+              <th>Lokasi</th>
+              <th>Tanggal</th>
+              <th class="col-actions">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- PHP will inject rows here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:14px;display:flex;justify-content:space-between;">
+        <div style="color:var(--muted);font-size:13px">Total:</div>
+        <a href="index.php?menu=balapan&screen=add" class="btn btn-add">+ Tambah Balapan</a>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
