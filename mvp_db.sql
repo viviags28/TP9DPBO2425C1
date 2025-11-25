@@ -25,9 +25,6 @@ INSERT INTO pembalap (nama, tim, negara, poinMusim, jumlahMenang) VALUES
 ('Pierre Gasly', 'AlphaTauri', 'France', 75, 0),
 ('Fernando Alonso', 'Alpine', 'Spain', 65, 0);
 
------------------------------------------------------------
--- TABEL BARU: BALAPAN
------------------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS balapan (
     id INT AUTO_INCREMENT PRIMARY KEY,
